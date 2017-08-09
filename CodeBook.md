@@ -250,7 +250,7 @@ Obtained after applying a Fast Fourier Transform (FFT) to the angular velocity i
    * "(frequency domain) angular velocity mean frequency Y"             
    * "(frequency domain) angular velocity mean frequency Z"  
  
-### "(frequency domain) magnitude body acceleration" -mean/std//mean frequency
+### "(frequency domain) magnitude body acceleration" -mean/std/mean frequency
 
 Obtained after applying a Fast Fourier Transform (FFT) to the magnitude body acceleration in time domain. The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
    
@@ -258,7 +258,7 @@ Obtained after applying a Fast Fourier Transform (FFT) to the magnitude body acc
    * "(frequency domain) magnitude body acceleration std"                
    * "(frequency domain) magnitude body acceleration mean frequency"
   
-### "(frequency domain) magnitude body acceleration Jerk" -mean/std//mean frequency
+### "(frequency domain) magnitude body acceleration Jerk" -mean/std/mean frequency
 
 Obtained after applying a Fast Fourier Transform (FFT) to the magnitude body acceleration Jerk in time domain. The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
 
@@ -266,7 +266,7 @@ Obtained after applying a Fast Fourier Transform (FFT) to the magnitude body acc
   * "(frequency domain) magnitude body acceleration Jerk std"           
   * "(frequency domain) magnitude body acceleration Jerk mean frequency"
 
-### "(frequency domain) magnitude angular velocity" -mean/std//mean frequency
+### "(frequency domain) magnitude angular velocity" -mean/std/mean frequency
 
 Obtained after applying a Fast Fourier Transform (FFT) to themagnitude angular velocity in time domain. The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
 
@@ -274,7 +274,7 @@ Obtained after applying a Fast Fourier Transform (FFT) to themagnitude angular v
   * "(frequency domain) magnitude angular velocity std"                 
   * "(frequency domain) magnitude angular velocity mean frequency"
 
-### "(frequency domain) magnitude angular velocity Jerk" -mean/std//mean frequency
+### "(frequency domain) magnitude angular velocity Jerk" -mean/std/mean frequency
 
 Obtained after applying a Fast Fourier Transform (FFT) to themagnitude angular velocity Jerk in time domain.  The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
 
