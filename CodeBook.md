@@ -47,7 +47,7 @@ The set of variables that were estimated from these signals are:
 * arCoeff(): Autorregresion coefficients with Burg order equal to 4
 * correlation(): correlation coefficient between two signals
 * maxInds(): index of the frequency component with largest magnitude
-* meanFreq(): Weighted average of the frequency components to obtain a 
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
 * skewness(): skewness of the frequency domain signal 
 * kurtosis(): kurtosis of the frequency domain signal 
 * bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
@@ -92,7 +92,7 @@ Notes:
 - Features are normalized and bounded within [-1,1].
 - Each feature vector is a row on the text file.
 
-## The Tidy Data Set [1] 
+## The Tidy Data Set 
 
 This tidy data that can be used for later analysis using the Human Activity Recognition Using Smartphones Data Set.
 
@@ -131,8 +131,7 @@ Body acceleration signal obtained by subtracting the gravity from the total acce
    
 * "(time domain) gravity acceleration" -XYZ -mean/std  
  
-Gravity acceleration. These time domain signals were captured at a constant rate of 50 Hz. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value
-and the standard deviation: 
+Gravity acceleration. These time domain signals were captured at a constant rate of 50 Hz. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value and the standard deviation: 
  
    - "(time domain) gravity acceleration mean X"                         
    - "(time domain) gravity acceleration mean Y"                         
@@ -155,65 +154,72 @@ The body linear acceleration was derived in time to obtain Jerk signals.
    
    
    - "(time domain) angular velocity mean X"                             
-[23] "(time domain) angular velocity mean Y"                             
-[24] "(time domain) angular velocity mean Z"                             
-[25] "(time domain) angular velocity std X"                              
-[26] "(time domain) angular velocity std Y"                              
-[27] "(time domain) angular velocity std Z"                              
-[28] "(time domain) angular velocity Jerk mean X"                        
-[29] "(time domain) angular velocity Jerk mean Y"                        
-[30] "(time domain) angular velocity Jerk mean Z"                        
-[31] "(time domain) angular velocity Jerk std X"                         
-[32] "(time domain) angular velocity Jerk std Y"                         
-[33] "(time domain) angular velocity Jerk std Z"                         
-[34] "(time domain) magnitude body acceleration mean"                    
-[35] "(time domain) magnitude body acceleration std"                     
-[36] "(time domain) magnitude gravity acceleration mean"                 
-[37] "(time domain) magnitude gravity acceleration std"                  
-[38] "(time domain) magnitude body acceleration Jerk mean"               
-[39] "(time domain) magnitude body acceleration Jerk std"                
-[40] "(time domain) magnitude angular velocity mean"                     
-[41] "(time domain) magnitude angular velocity std"                      
-[42] "(time domain) magnitude angular velocity Jerk mean"                
-[43] "(time domain) magnitude angular velocity Jerk std"                 
-[44] "(frequency domain) body acceleration mean X"                       
-[45] "(frequency domain) body acceleration mean Y"                       
-[46] "(frequency domain) body acceleration mean Z"                       
-[47] "(frequency domain) body acceleration std X"                        
-[48] "(frequency domain) body acceleration std Y"                        
-[49] "(frequency domain) body acceleration std Z"                        
-[50] "(frequency domain) body acceleration frequency mean  X"            
-[51] "(frequency domain) body acceleration frequency mean  Y"            
-[52] "(frequency domain) body acceleration frequency mean  Z"            
-[53] "(frequency domain) body acceleration Jerk mean X"                  
-[54] "(frequency domain) body acceleration Jerk mean Y"                  
-[55] "(frequency domain) body acceleration Jerk mean Z"                  
-[56] "(frequency domain) body acceleration Jerk std X"                   
-[57] "(frequency domain) body acceleration Jerk std Y"                   
-[58] "(frequency domain) body acceleration Jerk std Z"                   
-[59] "(frequency domain) body acceleration Jerk frequency mean  X"       
-[60] "(frequency domain) body acceleration Jerk frequency mean  Y"       
-[61] "(frequency domain) body acceleration Jerk frequency mean  Z"       
-[62] "(frequency domain) angular velocity mean X"                        
-[63] "(frequency domain) angular velocity mean Y"                        
-[64] "(frequency domain) angular velocity mean Z"                        
-[65] "(frequency domain) angular velocity std X"                         
-[66] "(frequency domain) angular velocity std Y"                         
-[67] "(frequency domain) angular velocity std Z"                         
-[68] "(frequency domain) angular velocity frequency mean  X"             
-[69] "(frequency domain) angular velocity frequency mean  Y"             
-[70] "(frequency domain) angular velocity frequency mean  Z"             
-[71] "(frequency domain) magnitude body acceleration mean"               
-[72] "(frequency domain) magnitude body acceleration std"                
-[73] "(frequency domain) magnitude body acceleration frequency mean"     
-[74] "(frequency domain) magnitude body acceleration Jerk mean"          
-[75] "(frequency domain) magnitude body acceleration Jerk std"           
-[76] "(frequency domain) magnitude body acceleration Jerk frequency mean"
-[77] "(frequency domain) magnitude angular velocity mean"                
-[78] "(frequency domain) magnitude angular velocity std"                 
-[79] "(frequency domain) magnitude angular velocity frequency mean"      
-[80] "(frequency domain) magnitude angular velocity Jerk mean"           
-[81] "(frequency domain) magnitude angular velocity Jerk std"            
-[82] "(frequency domain) magnitude angular velocity Jerk frequency mean" 
+   - "(time domain) angular velocity mean Y"                             
+   - "(time domain) angular velocity mean Z"                             
+   - "(time domain) angular velocity std X"                              
+   - "(time domain) angular velocity std Y"                              
+   - "(time domain) angular velocity std Z"                              
+   - "(time domain) angular velocity Jerk mean X"                        
+   - "(time domain) angular velocity Jerk mean Y"                        
+   - "(time domain) angular velocity Jerk mean Z"                        
+   - "(time domain) angular velocity Jerk std X"                         
+   - "(time domain) angular velocity Jerk std Y"                         
+   - "(time domain) angular velocity Jerk std Z"                         
+   - "(time domain) magnitude body acceleration mean"                    
+   - "(time domain) magnitude body acceleration std"                     
+   - "(time domain) magnitude gravity acceleration mean"                 
+   - "(time domain) magnitude gravity acceleration std"                  
+   - "(time domain) magnitude body acceleration Jerk mean"               
+   - "(time domain) magnitude body acceleration Jerk std"                
+   - "(time domain) magnitude angular velocity mean"                     
+   - "(time domain) magnitude angular velocity std"                      
+   - "(time domain) magnitude angular velocity Jerk mean"                
+   - "(time domain) magnitude angular velocity Jerk std"
+
+* "(frequency domain) body acceleration" -XYZ -mean/std/frequency mean 
+
+Body acceleration signal obtained by applying a Fast Fourier Transform (FFT) to the body acceleration in time domain. The units used for the accelerations are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequencyWeighted average of the frequency components to obtain a mean frequency (mean frequency): 
+
+   - "(frequency domain) body acceleration mean X"                       
+   - "(frequency domain) body acceleration mean Y"                       
+   - "(frequency domain) body acceleration mean Z"                       
+   - "(frequency domain) body acceleration std X"                        
+   - "(frequency domain) body acceleration std Y"                        
+   - "(frequency domain) body acceleration std Z"
+   - "(frequency domain) body acceleration mean frequency X"            
+   - "(frequency domain) body acceleration mean frequency  Y"            
+   - "(frequency domain) body acceleration mean frequency  Z"     
+   
+   
+- "(frequency domain) body acceleration Jerk mean X"                  
+- "(frequency domain) body acceleration Jerk mean Y"                  
+- "(frequency domain) body acceleration Jerk mean Z"                  
+- "(frequency domain) body acceleration Jerk std X"                   
+- "(frequency domain) body acceleration Jerk std Y"                   
+- "(frequency domain) body acceleration Jerk std Z"                   
+- "(frequency domain) body acceleration Jerk mean frequency  X"       
+- "(frequency domain) body acceleration Jerk mean frequency  Y"       
+- "(frequency domain) body acceleration Jerk mean frequency  Z"       
+- "(frequency domain) angular velocity mean X"                        
+- "(frequency domain) angular velocity mean Y"                        
+- "(frequency domain) angular velocity mean Z"                        
+- "(frequency domain) angular velocity std X"                         
+- "(frequency domain) angular velocity std Y"                         
+- "(frequency domain) angular velocity std Z"                         
+- "(frequency domain) angular velocity mean frequency  X"             
+- "(frequency domain) angular velocity mean frequency  Y"             
+- "(frequency domain) angular velocity mean frequency  Z"             
+- "(frequency domain) magnitude body acceleration mean"               
+- "(frequency domain) magnitude body acceleration std"                
+- "(frequency domain) magnitude body acceleration mean frequency"     
+- "(frequency domain) magnitude body acceleration Jerk mean"          
+- "(frequency domain) magnitude body acceleration Jerk std"           
+- "(frequency domain) magnitude body acceleration Jerk mean frequency"
+- "(frequency domain) magnitude angular velocity mean"                
+- "(frequency domain) magnitude angular velocity std"                 
+- "(frequency domain) magnitude angular velocity mean frequency"      
+- "(frequency domain) magnitude angular velocity Jerk mean"           
+- "(frequency domain) magnitude angular velocity Jerk std"            
+- "(frequency domain) magnitude angular velocity Jerk mean frequency" 
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
