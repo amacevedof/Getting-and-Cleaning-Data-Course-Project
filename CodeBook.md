@@ -94,7 +94,7 @@ Notes:
 
 ## The Tidy Data Set 
 
-This tidy data that can be used for later analysis using the Human Activity Recognition Using Smartphones Data Set.
+This tidy data can be used for later analysis using the Human Activity Recognition Using Smartphones Data Set.
 
 The R script called run_analysis.R that does the following:
 
@@ -164,39 +164,49 @@ The angular velocity vector measured by the gyroscope. These time domain signals
    
 ### "(time domain) angular velocity Jerk" -XYZ -mean/std
  
-Angular velocity derived in time to obtain Jerk signals.
+Angular velocity derived in time to obtain Jerk signals. These time domain signals were captured at a constant rate of 50 Hz. The units are radians/second. The variables that were estimated from these signals are the mean value (mean) and the standard deviation (sd): 
  
-   - "(time domain) angular velocity Jerk mean X"                        
-   - "(time domain) angular velocity Jerk mean Y"                        
-   - "(time domain) angular velocity Jerk mean Z"                        
-   - "(time domain) angular velocity Jerk std X"                         
-   - "(time domain) angular velocity Jerk std Y"                         
-   - "(time domain) angular velocity Jerk std Z"
+   * "(time domain) angular velocity Jerk mean X"                        
+   * "(time domain) angular velocity Jerk mean Y"                        
+   * "(time domain) angular velocity Jerk mean Z"                        
+   * "(time domain) angular velocity Jerk std X"                         
+   * "(time domain) angular velocity Jerk std Y"                         
+   * "(time domain) angular velocity Jerk std Z"
   
 ### "(time domain) magnitude body acceleration" -mean/std
+
+Magnitude of the body acceleration calculated using the Euclidean norm. These time domain signals were captured at a constant rate of 50 Hz. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value (mean) and the standard deviation (sd): 
    
-   - "(time domain) magnitude body acceleration mean"                    
-   - "(time domain) magnitude body acceleration std"  
+   * "(time domain) magnitude body acceleration mean"                    
+   * "(time domain) magnitude body acceleration std"  
 
 ### "(time domain) magnitude gravity acceleration" -XYZ -mean/std
+
+Magnitude of the gravity acceleration calculated using the Euclidean norm. These time domain signals were captured at a constant rate of 50 Hz. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value (mean) and the standard deviation (sd): 
    
-   - "(time domain) magnitude gravity acceleration mean"                 
-   - "(time domain) magnitude gravity acceleration std" 
+   * "(time domain) magnitude gravity acceleration mean"                 
+   * "(time domain) magnitude gravity acceleration std" 
   
-### "(time domain) magnitude body acceleration Jerk" -mean/std  
+### "(time domain) magnitude body acceleration Jerk" -mean/std 
+
+Magnitude of the body acceleration Jerk calculated using the Euclidean norm. These time domain signals were captured at a constant rate of 50 Hz. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value (mean) and the standard deviation (sd): 
   
-   - "(time domain) magnitude body acceleration Jerk mean"               
-   - "(time domain) magnitude body acceleration Jerk std" 
+   * "(time domain) magnitude body acceleration Jerk mean"               
+   * "(time domain) magnitude body acceleration Jerk std" 
  
-### "(time domain) magnitude angular velocity" -mean/std   
+### "(time domain) magnitude angular velocity" -mean/std 
+
+Magnitude of the angular velocity calculated using the Euclidean norm. These time domain signals were captured at a constant rate of 50 Hz. The units are radians/second. The variables that were estimated from these signals are the mean value (mean) and the standard deviation (sd): 
    
-   - "(time domain) magnitude angular velocity mean"                     
-   - "(time domain) magnitude angular velocity std"  
+   * "(time domain) magnitude angular velocity mean"                     
+   * "(time domain) magnitude angular velocity std"  
  
- ### "(time domain) magnitude angular velocity Jerk" -mean/std   
+### "(time domain) magnitude angular velocity Jerk" -mean/std
+ 
+Magnitude of the angular velocity Jerk calculated using the Euclidean norm. These time domain signals were captured at a constant rate of 50 Hz. The units are radians/second. The variables that were estimated from these signals are the mean value (mean) and the standard deviation (sd): 
    
-   - "(time domain) magnitude angular velocity Jerk mean"                
-   - "(time domain) magnitude angular velocity Jerk std"
+   * "(time domain) magnitude angular velocity Jerk mean"                
+   * "(time domain) magnitude angular velocity Jerk std"
 
 ### "(frequency domain) body acceleration" -XYZ -mean/std/mean frequency
 
@@ -241,6 +251,8 @@ Obtained after applying a Fast Fourier Transform (FFT) to the angular velocity i
    * "(frequency domain) angular velocity mean frequency Z"  
  
 ### "(frequency domain) magnitude body acceleration" -mean/std//mean frequency
+
+Obtained after applying a Fast Fourier Transform (FFT) to the magnitude body acceleration in time domain. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
    
    * "(frequency domain) magnitude body acceleration mean"               
    * "(frequency domain) magnitude body acceleration std"                
@@ -248,20 +260,26 @@ Obtained after applying a Fast Fourier Transform (FFT) to the angular velocity i
   
 ### "(frequency domain) magnitude body acceleration Jerk" -mean/std//mean frequency
 
-- "(frequency domain) magnitude body acceleration Jerk mean"          
-- "(frequency domain) magnitude body acceleration Jerk std"           
-- "(frequency domain) magnitude body acceleration Jerk mean frequency"
+Obtained after applying a Fast Fourier Transform (FFT) to the magnitude body acceleration Jerk in time domain. The units are 'g's (gravity of earth -> 9.80665 m/seg2). The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
+
+  * "(frequency domain) magnitude body acceleration Jerk mean"          
+  * "(frequency domain) magnitude body acceleration Jerk std"           
+  * "(frequency domain) magnitude body acceleration Jerk mean frequency"
 
 ### "(frequency domain) magnitude angular velocity" -mean/std//mean frequency
 
-- "(frequency domain) magnitude angular velocity mean"                
-- "(frequency domain) magnitude angular velocity std"                 
-- "(frequency domain) magnitude angular velocity mean frequency"
+Obtained after applying a Fast Fourier Transform (FFT) to themagnitude angular velocity in time domain.  The units are radians/second. The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
+
+  * "(frequency domain) magnitude angular velocity mean"                
+  * "(frequency domain) magnitude angular velocity std"                 
+  * "(frequency domain) magnitude angular velocity mean frequency"
 
 ### "(frequency domain) magnitude angular velocity Jerk" -mean/std//mean frequency
 
-- "(frequency domain) magnitude angular velocity Jerk mean"           
-- "(frequency domain) magnitude angular velocity Jerk std"            
-- "(frequency domain) magnitude angular velocity Jerk mean frequency" 
+Obtained after applying a Fast Fourier Transform (FFT) to themagnitude angular velocity Jerk in time domain.  The units are radians/second. The variables that were estimated from these signals are the mean value (mean), the standard deviation (sd) and the weighted average of the frequency components to obtain a mean frequency (mean frequency):
+
+  * "(frequency domain) magnitude angular velocity Jerk mean"           
+  * "(frequency domain) magnitude angular velocity Jerk std"            
+  * "(frequency domain) magnitude angular velocity Jerk mean frequency" 
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
